@@ -5,7 +5,6 @@
     --primary: #528247;
     --primary-dark: #2E6514;
 
-    /* Golden Ratio Fluid Typography Scale (1.618) */
     --text-xs: clamp(0.618rem, 0.5vw + 0.5rem, 0.8rem);
     --text-sm: clamp(0.8rem, 0.8vw + 0.6rem, 1rem);
     --text-base: clamp(1rem, 1.2vw + 0.7rem, 1.25rem);
@@ -14,7 +13,6 @@
     --text-xl: clamp(2.618rem, 3.5vw + 1.5rem, 4.236rem);
     --text-2xl: clamp(4.236rem, 6vw + 2rem, 6.854rem);
 
-    /* Golden Ratio Spacing Scale */
     --space-xs: clamp(0.618rem, 1vw, 1rem);
     --space-sm: clamp(1rem, 2vw, 1.618rem);
     --space-md: clamp(1.618rem, 4vw, 2.618rem);
@@ -70,7 +68,7 @@ html {
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     padding: 0 24px;
-    /* Solid mobile safe-zone */
+
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -78,7 +76,7 @@ html {
 @media (min-width: 993px) {
     .site-grid {
         padding: 0 48px;
-        /* Elegant breathing room for tablets/small laptops from 993px up */
+
     }
 }
 
@@ -86,14 +84,14 @@ html {
     .site-grid {
         grid-template-columns: repeat(12, 1fr);
         padding: 0 52px;
-        /* Balanced spacing for laptop sizes (1024px - 1199px) */
+
     }
 }
 
 @media (min-width: 1200px) {
     .site-grid {
         padding: 0 60px;
-        /* Spacious, premium high-end safe-zone for widescreen desktops */
+
     }
 }
 
@@ -509,45 +507,65 @@ html {
     min-height: 500px;
 }
 
+.footer-inner-card h4 {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: var(--text-sm) !important;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-md) !important;
+}
+
+.footer-inner-card p,
+.footer-inner-card ul,
+.footer-inner-card a {
+    font-family: 'Lexend', sans-serif;
+    font-size: var(--text-sm) !important;
+    line-height: 1.7 !important;
+}
+
+.footer-inner-card .footer-contact-pill .text-base {
+    font-size: var(--text-sm) !important;
+}
+
+.footer-inner-card .site-grid.mt-20 p {
+    font-size: var(--text-xs) !important;
+}
+
 .footer-inner-card .site-grid {
     padding: 0 24px;
-    /* Consistent mobile padding */
+
 }
 
 @media (min-width: 993px) {
     .footer-inner-card .site-grid {
         padding: 0 48px;
-        /* Elegant breathing room for tablets/small laptops from 993px up */
+
     }
 }
 
 @media (min-width: 1024px) {
     .footer-inner-card .site-grid {
         padding: 0 52px;
-        /* Balanced spacing for laptop sizes (1024px - 1199px) */
+
     }
 }
 
 @media (min-width: 1024px) and (max-width: 1199px) {
     .footer-inner-card h4 {
-        font-size: 1rem !important;
-        margin-bottom: 1.5rem !important;
+        margin-bottom: var(--space-sm) !important;
     }
 
     .footer-inner-card .footer-contact-pill {
         padding: 8px 16px !important;
         max-width: 280px !important;
     }
-
-    .footer-inner-card .footer-contact-pill .text-base {
-        font-size: 0.85rem !important;
-    }
 }
 
 @media (min-width: 1200px) {
     .footer-inner-card .site-grid {
         padding: 0 60px;
-        /* Spacious, premium high-end safe-zone for widescreen desktops */
+
     }
 }
 
@@ -869,9 +887,9 @@ html {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
     background: transparent !important;
-    /* Premium transparent grid track */
+
     gap: 24px !important;
-    /* Spacious modern gap between cards */
+
 }
 
 .research-item {
@@ -879,26 +897,26 @@ html {
     background: var(--white);
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 0.75rem !important;
-    /* High-end rounded corners matching product cards */
+
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
-    /* Premium soft drop shadow */
+
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     min-height: 140px;
-    /* Symmetrical, stable card sizing */
+
     transition: none !important;
-    /* Enforce strictly static behavior */
+
 }
 
 .research-item:hover {
     transform: none !important;
-    /* Strictly no translation/scaling on hover */
+
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03) !important;
-    /* Shadow remains static */
+
     border-color: rgba(0, 0, 0, 0.08) !important;
-    /* Border remains static */
+
 }
 
 .research-name {
@@ -912,6 +930,23 @@ html {
     font-size: var(--text-xs);
     line-height: 1.6;
     opacity: 0.8;
+}
+
+#people h3 {
+    font-family: 'Lexend', sans-serif;
+    font-size: var(--text-base) !important;
+    line-height: 1.3 !important;
+}
+
+#people p.opacity-80 {
+    font-family: 'Lexend', sans-serif;
+    font-size: var(--text-sm) !important;
+}
+
+#people .col-span-4 p {
+    font-family: 'Lexend', sans-serif;
+    font-size: var(--text-base) !important;
+    line-height: 1.6 !important;
 }
 
 .footer-pro-top {
@@ -1183,9 +1218,6 @@ html {
     }
 }
 
-/* ═══════════════════════════════════════════
-   HAMBURGER BUTTON (hidden on desktop)
-═══════════════════════════════════════════ */
 .hamburger-btn {
     display: none;
     flex-direction: column;
@@ -1227,9 +1259,6 @@ html {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ═══════════════════════════════════════════
-   MOBILE MENU OVERLAY (top-down dropdown)
-═══════════════════════════════════════════ */
 .mobile-menu {
     display: none;
     position: fixed;
@@ -1307,9 +1336,6 @@ html {
     font-size: 18px;
 }
 
-/* ═══════════════════════════════════════════
-   BREAKPOINT: ≤ 1240px — Hide desktop nav
-═══════════════════════════════════════════ */
 @media (max-width: 1240px) {
     .nav-box {
         display: none !important;
@@ -1349,9 +1375,6 @@ html {
     }
 }
 
-/* ═══════════════════════════════════════════
-   BREAKPOINT: ≤ 992px — Product section fix
-═══════════════════════════════════════════ */
 @media (max-width: 992px) {
     #product {
         height: auto;
@@ -1373,7 +1396,6 @@ html {
         height: auto;
     }
 
-    /* Hide the global background image track since we embed them inside cards on mobile */
     .product-bg-track {
         display: none !important;
     }
@@ -1390,7 +1412,6 @@ html {
         background: transparent;
     }
 
-    /* Beautiful vertical stack with spacing for each individual product card */
     .product-cards-track {
         transform: none !important;
         width: 100% !important;
@@ -1400,7 +1421,6 @@ html {
         padding: 32px 16px !important;
     }
 
-    /* Style the embedded product images inside each card */
     .product-mobile-image {
         display: block !important;
         width: 100% !important;
@@ -1416,7 +1436,6 @@ html {
         object-fit: cover !important;
     }
 
-    /* Safe-zone horizontal padding for all sections */
     main>section,
     main>section>.site-grid,
     .about-header-row .site-grid {
@@ -1424,73 +1443,68 @@ html {
         padding-right: 16px;
     }
 
-    /* 1. Main Card Wrapper (holds both image and text) */
     .product-scroll-item {
         display: flex !important;
         flex-direction: column !important;
-        /* Force a vertical column stack */
+
         background-color: #ffffff !important;
-        /* Enforce single card background color */
+
         border-radius: 16px !important;
-        /* Retain rounded corners */
+
         overflow: hidden !important;
-        /* Ensure content and images clip correctly */
+
         padding: 0 !important;
-        /* Remove inner padding so the image sits flush against edges */
+
         margin: 0 !important;
         border: 1px solid rgba(0, 0, 0, 0.08) !important;
-        /* Subtle border for definition on white bg */
+
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04) !important;
-        /* Premium soft drop shadow */
+
     }
 
-    /* Product: image container fills card top, no gap */
     .product-bg-track {
         border-radius: 0 !important;
-        /* Naturally clipped by wrapper's overflow hidden */
+
         flex-shrink: 0 !important;
     }
 
-    /* 2. Internal Child Container (holds logo and description text) */
     .product-description-card {
         padding: 32px 24px !important;
-        /* Use internal padding on this child container for spacing */
+
         border-radius: 0 !important;
         background: transparent !important;
-        /* Strip nested backgrounds completely */
+
         border: none !important;
-        /* Remove borders */
+
         box-shadow: none !important;
-        /* Remove shadows */
+
         margin-top: 0 !important;
         width: 100% !important;
-        /* Force it to take full width */
+
         max-width: 100% !important;
-        /* Remove any desktop fixed widths */
+
         min-height: auto !important;
         height: auto !important;
-        /* Reset desktop minimum height */
+
         display: flex !important;
         flex-direction: column !important;
-        /* Change to a vertical stack for internal content */
+
         align-items: flex-start !important;
-        /* Ensure left alignment */
+
         text-align: left !important;
     }
 
-    /* 3. Typography and Spacing Adjustments */
     .product-logo-tag {
         margin-bottom: 16px !important;
-        /* Ensure the product logo has space below it */
+
     }
 
     .product-description-card p {
         width: 100% !important;
-        /* Force paragraph text to stretch full width */
+
         max-width: 100% !important;
     }
 
-    /* 4. Remove Intermediate Containers (Empty nested divs between main card and text) */
     .product-description-card>div:not(.product-logo-tag) {
         background: transparent !important;
         border: none !important;
@@ -1500,7 +1514,6 @@ html {
         max-width: 100% !important;
     }
 
-    /* Footer: tablet — 2x2 grid with breathing room and explicit grid placement */
     .footer-inner-card .site-grid {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
@@ -1516,24 +1529,18 @@ html {
         grid-column: span 2 !important;
     }
 
-    /* Logo spans full */
     .footer-inner-card .site-grid>div:nth-child(2) {
         grid-column: span 1 !important;
     }
 
-    /* Nav spans 1 */
     .footer-inner-card .site-grid>div:nth-child(3) {
         grid-column: span 1 !important;
     }
 
-    /* Office spans 1 */
-
-    /* Copyright block gets a top margin separating it from socials above on tablet */
     .footer-inner-card .site-grid.mt-20 {
         margin-top: 48px !important;
     }
 
-    /* Research grid & item styling on tablet */
     .research-grid {
         grid-template-columns: repeat(3, 1fr) !important;
         gap: 12px !important;
@@ -1552,9 +1559,6 @@ html {
     }
 }
 
-/* ═══════════════════════════════════════════
-   BREAKPOINT: ≤ 768px — General mobile layout
-═══════════════════════════════════════════ */
 @media (max-width: 768px) {
 
     .hero-eyebrow {
@@ -1572,8 +1576,7 @@ html {
         line-height: 1.25 !important;
     }
 
-    .nav-link,
-    .footer-inner-card h4 {
+    .nav-link {
         font-size: 1.18rem !important;
     }
 
@@ -1632,7 +1635,6 @@ html {
         padding: 48px 0 32px;
     }
 
-    /* Footer: mobile — fully stacked single column with explicit sorting */
     .footer-inner-card .site-grid {
         display: flex !important;
         flex-direction: column !important;
@@ -1644,7 +1646,6 @@ html {
         width: 100% !important;
     }
 
-    /* Order: Logo top, Nav second, Office third, Socials at the bottom */
     .footer-inner-card .site-grid>div:nth-child(1) {
         order: 1 !important;
     }
@@ -1657,16 +1658,13 @@ html {
         order: 3 !important;
     }
 
-    /* Copyright block gets a top margin separating it from socials above */
     .footer-inner-card .site-grid.mt-20 {
         margin-top: 32px !important;
     }
 
-    /* Contact pills fill 100% width on mobile for easy tapping */
     .footer-contact-pill {
         width: 100% !important;
         max-width: 100% !important;
-        justify-content: center !important;
     }
 
     .site-grid {
