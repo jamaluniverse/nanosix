@@ -1089,9 +1089,9 @@ html {
     height: 100%;
     z-index: 1;
     overflow: hidden;
-
     border-radius: 1.5rem !important;
-
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    isolation: isolate;
 }
 
 .product-bg {
@@ -1104,6 +1104,14 @@ html {
     transform: translateY(100%);
     transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 1;
+}
+
+.product-bg[data-index="1"] {
+    object-position: 30% center;
+}
+
+.product-bg[data-index="2"] {
+    object-position: 75% center;
 }
 
 .product-bg.active {
