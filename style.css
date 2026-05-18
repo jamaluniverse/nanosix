@@ -178,7 +178,7 @@ html { scroll-behavior: smooth; }
 .footer-copyright { font-family: 'Lexend', sans-serif; font-size: var(--text-xs); color: rgba(255, 255, 255, 0.3); letter-spacing: 0.05em; }
 .footer-inner-card .site-grid.mt-20 { margin-top: 80px !important; }
 #product { position: relative; height: 450vh; background: #FFFFFF; }
-.product-frame { margin: 0 2rem 2rem 2rem; height: calc(100vh - 120px - 2rem); border-radius: 1.5rem !important; overflow: visible; position: sticky; top: 120px; background: #000; }
+.product-frame { margin: 0 2rem 0 2rem; height: calc(100vh - 120px); border-radius: 1.5rem !important; overflow: hidden; position: sticky; top: 120px; background: #000; }
 .sticky-product-container { position: relative; height: 100%; width: 100%; }
 .product-side-title { position: absolute; left: 10%; top: 50%; transform: translateY(-50%); font-family: 'Lexend', sans-serif; font-weight: 900; font-size: clamp(4rem, 10vw, 8rem); color: #FFFFFF; opacity: 1; z-index: 50; pointer-events: none; text-transform: uppercase; }
 .product-bg-track { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; overflow: hidden; border-radius: 1.5rem !important; -webkit-mask-image: -webkit-radial-gradient(white, black); isolation: isolate; }
@@ -242,7 +242,7 @@ html { scroll-behavior: smooth; }
     .product-mobile-image { display: block !important; width: 100% !important; height: 55vw !important; min-height: 220px !important; max-height: 380px !important; overflow: hidden !important; }
     .product-mobile-image img { width: 100% !important; height: 100% !important; object-fit: cover !important; }
     main>section, main>section>.site-grid, .about-header-row .site-grid { padding-left: 16px; padding-right: 16px; }
-    .product-scroll-item { display: flex !important; flex-direction: column !important; background-color: #ffffff !important; border-radius: 16px !important; overflow: hidden !important; padding: 0 !important; margin: 0 !important; border: 1px solid rgba(0, 0, 0, 0.08) !important; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04) !important; }
+    .product-scroll-item { display: flex !important; flex-direction: column !important; background-color: #ffffff !important; border-radius: 16px !important; overflow: hidden !important; padding: 0 !important; margin: 0 !important; border: 1px solid rgba(0, 0, 0, 0.08) !important; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04) !important; height: auto !important; }
     .product-bg-track { border-radius: 0 !important; flex-shrink: 0 !important; }
     .product-description-card { padding: 32px 24px !important; border-radius: 0 !important; background: transparent !important; border: none !important; box-shadow: none !important; margin-top: 0 !important; width: 100% !important; max-width: 100% !important; min-height: auto !important; height: auto !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; text-align: left !important; }
     .product-logo-tag { margin-bottom: 16px !important; }

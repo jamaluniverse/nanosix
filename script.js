@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const _0x5d9f = _0x3e1a.offsetHeight;
         const _0x2a0b = window.innerHeight;
 
-        let _0x6c1d = -_0x1c8e.top / (_0x5d9f - _0x2a0b);
+        let _0x6c1d = -_0x1c8e.top / (_0x5d9f - _0x2a0b - (_0x2a0b * 0.75));
         _0x6c1d = Math.max(0, Math.min(1, _0x6c1d));
 
         const _0x8f2e = _0x9b2c.length;
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         _0x4f8d.style.transform = 'translateY(' + (-_0x6c1d * _0x1d4e) + 'px)';
 
         const _0x9f5c = _0x4f8d.querySelectorAll('.product-scroll-item');
-        const _0x6a2b = window.innerHeight / 2;
+        const _0x6a2b = 120 + _0x3b7a / 2;
         let _0x5c7f = 0;
         let _0x8b3d = Infinity;
 
