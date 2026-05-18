@@ -181,7 +181,7 @@ html { scroll-behavior: smooth; }
 .product-frame { margin: 0 2rem 0 2rem; height: calc(100vh - 120px); border-radius: 1.5rem !important; position: sticky; top: 120px; background: #000; }
 .sticky-product-container { position: relative; height: 100%; width: 100%; }
 .product-side-title { position: absolute; left: 10%; top: 50%; transform: translateY(-50%); font-family: 'Lexend', sans-serif; font-weight: 900; font-size: clamp(4rem, 10vw, 8rem); color: #FFFFFF; opacity: 1; z-index: 50; pointer-events: none; text-transform: uppercase; }
-.product-bg-track { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; overflow: hidden; border-radius: 1.5rem !important; -webkit-mask-image: -webkit-radial-gradient(white, black); isolation: isolate; }
+.product-bg-track { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; overflow: hidden; border-radius: 1.5rem !important; -webkit-mask-image: -webkit-radial-gradient(white, black); mask-image: radial-gradient(white, black); isolation: isolate; }
 .product-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 1; transform: translateY(100%); transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); z-index: 1; }
 .product-bg[data-index="1"] { object-position: 30% center; }
 .product-bg[data-index="2"] { object-position: 75% center; }
