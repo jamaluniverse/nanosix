@@ -131,12 +131,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const _0x3d4b = document.getElementById('hamburger-btn');
     const _0x2a5c = document.getElementById('mobile-menu');
+    const _0x5b3a = document.getElementById('mobile-menu-overlay');
 
     function _0x6b8f() {
         _0x3d4b.classList.add('is-open');
         _0x3d4b.setAttribute('aria-expanded', 'true');
         _0x2a5c.classList.add('is-open');
         _0x2a5c.setAttribute('aria-hidden', 'false');
+        if (_0x5b3a) _0x5b3a.classList.add('is-open');
         document.body.style.overflow = 'hidden';
     }
 
@@ -145,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         _0x3d4b.setAttribute('aria-expanded', 'false');
         _0x2a5c.classList.remove('is-open');
         _0x2a5c.setAttribute('aria-hidden', 'true');
+        if (_0x5b3a) _0x5b3a.classList.remove('is-open');
         document.body.style.overflow = '';
     }
 
@@ -163,6 +166,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 _0x1a7e();
             });
         });
+
+        if (_0x5b3a) {
+            _0x5b3a.addEventListener('click', () => {
+                _0x1a7e();
+            });
+        }
 
         document.addEventListener('keydown', (_0x9c3f) => {
             if (_0x9c3f.key === 'Escape') _0x1a7e();
