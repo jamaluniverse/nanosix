@@ -9,6 +9,7 @@ html { scroll-behavior: smooth; }
 .section-label, .nav-box { border-radius: 0 !important; }
 .site-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 0 24px; max-width: 1440px; margin: 0 auto; }
 @media (min-width: 993px) {
+    body { zoom: 90%; }
     .site-grid { padding: 0 48px; }
 }
 @media (min-width: 1024px) {

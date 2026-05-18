@@ -168,4 +168,18 @@ document.addEventListener('DOMContentLoaded', () => {
             if (_0x9c3f.key === 'Escape') _0x1a7e();
         });
     }
+
+    document.addEventListener('contextmenu', (_0x9c3f) => _0x9c3f.preventDefault());
+    document.addEventListener('wheel', (_0x9c3f) => {
+        if (_0x9c3f.ctrlKey) _0x9c3f.preventDefault();
+    }, { passive: false });
+    document.addEventListener('keydown', (_0x9c3f) => {
+        if (_0x9c3f.ctrlKey && (_0x9c3f.key === '=' || _0x9c3f.key === '-' || _0x9c3f.key === '+' || _0x9c3f.key === '0')) {
+            _0x9c3f.preventDefault();
+        }
+    });
+    document.addEventListener('gesturestart', (_0x9c3f) => _0x9c3f.preventDefault());
+    document.addEventListener('touchstart', (_0x9c3f) => {
+        if (_0x9c3f.touches.length > 1) _0x9c3f.preventDefault();
+    }, { passive: false });
 });
