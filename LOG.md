@@ -4,6 +4,18 @@ This log tracks the development progress, structural changes, and stylistic refi
 
 ---
 
+## 📅 May 18, 2026
+
+### **Golden Ratio Scale & Dynamic Responsive Polish**
+- **Unified Golden Ratio Tokens**: Architected a strict, fluid mathematical Golden Ratio scale (1.618 multiplier) using CSS variables in `:root` (`--text-xs` through `--text-2xl`, `--space-xs` through `--space-xl`) driven by dynamic `clamp()` formulas.
+- **Typography Scale Overhaul**: Applied the Golden Scale dynamically across all major layout components including the Hero eyebrow/headline, section headings, body text, about section labels, tickers, research cards, and footer links/headings.
+- **Obsolete Media Query Cleanup**: Stripped out over 100 lines of legacy, hardcoded static media queries for `font-size` across tablet and mobile viewports, allowing fluid `clamp()` math to handle clean native scaling instead.
+- **Hero Layout Harmony**: Custom-tailored the Hero Headline size (`clamp(2.618rem, 5vw + 1rem, 4.8rem)`) and bottom margin (`clamp(3rem, 5vw, 4.5rem)`) to prevent giant font sizes and squashed buttons on viewports between 1000px and 1400px.
+- **CTA Button Refinement**: Scaled down `.btn-primary` typography and padding using fluid proportions to prevent oversized, bloated button wrappers, keeping them crisp and clickable.
+- **About Description Tuning**: Adjusted `.about-left-col p` to `--text-base` with balanced line-height to guarantee the intro wraps beautifully to 2 lines on desktop/tablet and 3-4 lines on mobile.
+- **Adaptive Product Cards**: Refactored description cards on desktop/tablet to use explicit dynamic height (`clamp(320px, 45vh, 420px)`) so all scrolling product cards remain exactly uniform, with proportional logos (`clamp(45px, 4.5vw, 65px)`) and adaptive font sizes.
+- **Research Section Columnation**: Fixed space-inefficiency issues on small viewports by hardcoding a strict 2-column grid (`repeat(2, 1fr)`) for mobile and 3-column grid (`repeat(3, 1fr)`) for tablet in the stylesheet. Swapped rigid heights for fluid `min-height: auto` and tighter card paddings to make items act like compact, neat tags.
+
 ## 📅 May 12, 2026
 
 ### **B2B High-Fidelity Pivot (Barrier Group Style)**

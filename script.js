@@ -8,6 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateProductGallery() {
         if (!productSection || !cardsTrack) return;
 
+        // On mobile/tablet, rely on pure native stack layout and skip scroll transforms
+        if (window.innerWidth < 992) {
+            if (cardsTrack.style.transform) {
+                cardsTrack.style.transform = '';
+            }
+            return;
+        }
+
         const sectionRect = productSection.getBoundingClientRect();
         const sectionHeight = productSection.offsetHeight;
         const viewportHeight = window.innerHeight;
@@ -73,6 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
         updateProductGallery(); 
     });
 
+    window.addEventListener('resize', updateProductGallery);
+
     const callBtn = document.getElementById('call-btn');
     const callPanel = document.getElementById('call-panel');
     const emailBtn = document.getElementById('email-btn');
@@ -111,4 +121,44 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function openMobileMenu() {
+        hamburgerBtn.classList.add('is-open');
+        hamburgerBtn.setAttribute('aria-expanded', 'true');
+        mobileMenu.classList.add('is-open');
+        mobileMenu.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+        hamburgerBtn.classList.remove('is-open');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+        mobileMenu.classList.remove('is-open');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    if (hamburgerBtn && mobileMenu) {
+        hamburgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (hamburgerBtn.classList.contains('is-open')) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
+        });
+
+        mobileMenu.querySelectorAll('.mobile-menu-link').forEach(link => {
+            link.addEventListener('click', () => {
+                closeMobileMenu();
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeMobileMenu();
+        });
+    }
 });
