@@ -178,7 +178,7 @@ html { scroll-behavior: smooth; }
 .footer-copyright { font-family: 'Lexend', sans-serif; font-size: var(--text-xs); color: rgba(255, 255, 255, 0.3); letter-spacing: 0.05em; }
 .footer-inner-card .site-grid.mt-20 { margin-top: 80px !important; }
 #product { position: relative; height: 450vh; background: #FFFFFF; }
-.product-frame { margin: 0 2rem 0 2rem; height: calc(100vh - 120px); border-radius: 1.5rem !important; overflow: hidden; position: sticky; top: 120px; background: #000; }
+.product-frame { margin: 0 2rem 0 2rem; height: calc(100vh - 120px); border-radius: 1.5rem !important; position: sticky; top: 120px; background: #000; }
 .sticky-product-container { position: relative; height: 100%; width: 100%; }
 .product-side-title { position: absolute; left: 10%; top: 50%; transform: translateY(-50%); font-family: 'Lexend', sans-serif; font-weight: 900; font-size: clamp(4rem, 10vw, 8rem); color: #FFFFFF; opacity: 1; z-index: 50; pointer-events: none; text-transform: uppercase; }
 .product-bg-track { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; overflow: hidden; border-radius: 1.5rem !important; -webkit-mask-image: -webkit-radial-gradient(white, black); isolation: isolate; }
