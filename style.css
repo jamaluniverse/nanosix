@@ -286,3 +286,178 @@ html { scroll-behavior: smooth; }
     .values-ticker-inner span { padding-right: 3rem; }
     .ticker-dot { margin-left: 3rem; }
 }
+
+/* Desktop Mode Restriction Overlay styling */
+.desktop-restriction-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    background: rgba(26, 26, 26, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.desktop-restriction-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.desktop-restriction-card {
+    background: var(--bg-color);
+    border: 2px solid var(--black);
+    box-shadow: 8px 8px 0px var(--black);
+    padding: 32px 24px;
+    width: 100%;
+    max-width: 440px;
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+    transform: translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desktop-restriction-overlay.show .desktop-restriction-card {
+    transform: translateY(0);
+}
+
+.desktop-restriction-logo {
+    height: 48px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.desktop-restriction-title {
+    font-weight: 800;
+    font-size: var(--text-md);
+    text-transform: uppercase;
+    color: var(--black);
+    margin: 0 0 12px 0;
+    letter-spacing: -0.02em;
+}
+
+.desktop-restriction-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #4a4a4a;
+    margin: 0 0 24px 0;
+}
+
+.desktop-restriction-desc strong {
+    color: var(--black);
+}
+
+.desktop-restriction-tabs {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--black);
+    padding-bottom: 8px;
+}
+
+.restriction-tab-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #888888;
+    transition: color 0.2s, background 0.2s;
+    border-radius: 99px !important;
+}
+
+.restriction-tab-btn.active {
+    background: var(--black);
+    color: var(--white);
+}
+
+.desktop-restriction-content {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 24px;
+    background: var(--white);
+    border: 2px solid var(--black);
+    padding: 16px;
+    min-height: 110px;
+}
+
+.restriction-instruction {
+    display: none;
+}
+
+.restriction-instruction.active {
+    display: block;
+    animation: fade-in 0.3s ease;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.restriction-instruction ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.restriction-instruction li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--black);
+    margin-bottom: 8px;
+}
+
+.restriction-instruction li:last-child {
+    margin-bottom: 0;
+}
+
+.restriction-instruction .badge {
+    background: #e2e2e2;
+    border: 1px solid var(--black);
+    padding: 1px 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.restriction-instruction .highlight {
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.desktop-restriction-actions {
+    width: 100%;
+}
+
+.desktop-restriction-btn {
+    width: 100%;
+    display: block;
+    text-align: center;
+    border: 2px solid var(--black);
+    box-shadow: 4px 4px 0px var(--black);
+    background-color: var(--primary) !important;
+    color: var(--white) !important;
+    transition: transform 0.15s, box-shadow 0.15s;
+    border-radius: 99px !important;
+    padding: 12px 24px !important;
+    font-size: 0.9rem !important;
+}
+
+.desktop-restriction-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--black);
+}

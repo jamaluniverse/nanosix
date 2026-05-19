@@ -457,6 +457,41 @@
             </div>
         </footer>
     </div>
+
+    <!-- Desktop Mode Restriction Overlay -->
+    <div id="desktop-mode-restriction" class="desktop-restriction-overlay">
+        <div class="desktop-restriction-card">
+            <img src="element/logo-standalone.svg" alt="Nanosix Logo" class="desktop-restriction-logo">
+            <h2 class="desktop-restriction-title">Desktop Mode Detected</h2>
+            <p class="desktop-restriction-desc">
+                For the best layout, performance, and experience, please disable <strong>Request Desktop Site</strong> in your mobile browser.
+            </p>
+            
+            <div class="desktop-restriction-tabs">
+                <button id="tab-btn-ios" class="restriction-tab-btn active">iOS Safari</button>
+                <button id="tab-btn-android" class="restriction-tab-btn">Android Chrome</button>
+            </div>
+            
+            <div class="desktop-restriction-content">
+                <div id="instruction-ios" class="restriction-instruction active">
+                    <ol>
+                        <li>Tap the <span class="badge">Aa</span> or <span class="badge">aA</span> icon in the address bar.</li>
+                        <li>Select <span class="highlight">Request Mobile Website</span>.</li>
+                    </ol>
+                </div>
+                <div id="instruction-android" class="restriction-instruction">
+                    <ol>
+                        <li>Tap the menu icon <span class="badge">⋮</span> in the top right corner.</li>
+                        <li>Uncheck the <span class="highlight">Desktop site</span> checkbox.</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="desktop-restriction-actions">
+                <button id="continue-anyway-btn" class="btn-primary desktop-restriction-btn">Continue Anyway</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
