@@ -1019,8 +1019,8 @@ html {
 }
 
 .product-frame {
-    margin: 0 2rem 0 2rem;
-    height: calc(100vh - 120px);
+    margin: 0 2rem 2rem 2rem;
+    height: calc(100vh - 120px - 2rem);
     border-radius: 1.5rem !important;
     position: sticky;
     top: 120px;

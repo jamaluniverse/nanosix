@@ -46,7 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
         _0x4f8d.style.transform = 'translateY(' + (-_0x6c1d * _0x1d4e) + 'px)';
 
         const _0x9f5c = _0x4f8d.querySelectorAll('.product-scroll-item');
-        const _0x6a2b = 120 + _0x3b7a / 2;
+        const _0x3b7a_frame = document.querySelector('.product-frame');
+        const _0x3b7a_top = _0x3b7a_frame ? parseInt(window.getComputedStyle(_0x3b7a_frame).top) || 120 : 120;
+        const _0x6a2b = _0x3b7a_top + _0x3b7a / 2;
         let _0x5c7f = 0;
         let _0x8b3d = Infinity;
 
